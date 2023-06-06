@@ -20,3 +20,5 @@ elif number < 0:
     elif (-1*lastDigit > 5):
         print("Last digit of", number, "is", -lastDigit, end=' ')
         print("and is greater than 5")
+else:
+    print("Last digit of 0 is 0 and is 0")
