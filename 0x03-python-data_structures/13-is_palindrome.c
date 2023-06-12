@@ -27,10 +27,16 @@ int list_size(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *iter = *head, *comp = *head;
+	listint_t *iter, *comp;
 	int _size = list_size(head);
 	int list_copy[_size];
 	int i = 0, counter = 0, j;
+
+	if (*head == NULL || *head->next == NULL)
+		return (1);
+
+	iter = *head;
+	comp = *head
 
 	while (iter)
 	{
