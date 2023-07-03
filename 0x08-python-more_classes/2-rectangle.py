@@ -52,12 +52,12 @@ class Rectangle:
         else:
             self.__height = value
 
-    '''Area of a Triangle'''
+    '''Area of a rectangle'''
     def area(self):
         return self.__height * self.__width
 
-    '''Perimeter of a Triangle'''
+    '''Perimeter of a rectangle'''
     def perimeter(self):
-        if self.__height < 0 or self.__width < 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * self.__width + 2 * self.__height
