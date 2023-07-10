@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-'''MyList class definition'''
+"""Class inheritance"""
+list = __import__('0-lookup').lookup
 
 
-class MyList:
+class MyList(list):
     def print_sorted(self):
         '''prints sorted list in ascending order'''
         print(sorted(self))
