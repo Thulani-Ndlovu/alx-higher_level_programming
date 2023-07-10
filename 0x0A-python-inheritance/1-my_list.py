@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Class inheritance"""
-list = __import__('0-lookup').lookup
+"""Class inheritance list"""
 
 
 class MyList(list):
