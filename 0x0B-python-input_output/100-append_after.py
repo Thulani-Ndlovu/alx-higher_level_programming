@@ -11,7 +11,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename) as r:
         for Content in r:
             info += Content
-            if search_string in info:
+            if search_string in Content:
                 info += new_string
     with open(filename, "w") as w:
         w.write(info)
