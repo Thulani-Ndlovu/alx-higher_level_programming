@@ -98,9 +98,17 @@ class Rectangle(Base):
     '''Display function'''
     def display(self):
         '''print rectangle with # characters'''
+        count = 0
+        for a in range(self.__y):
+            print("")
         for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
+            for j in range(self.__x+self.__width):
+                if (count < self.__x):
+                    print(" ", end="")
+                    count += 1
+                else:
+                    print("#", end="")
+            count = 0
             print("")
 
     '''Overriding __str__ method'''
