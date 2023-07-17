@@ -115,3 +115,24 @@ class Rectangle(Base):
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height))
+
+    '''Update function'''
+    def update(self, *vals):
+        '''assigns an valument to each attribute'''
+        if vals and len(vals) != 0:
+            count = 0
+            for val in vals:
+                if count == 0:
+                    if val is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = val
+                elif count == 1:
+                    self.width = val
+                elif count == 2:
+                    self.height = val
+                elif count == 3:
+                    self.x = val
+                elif count == 4:
+                    self.y = val
+                count += 1
