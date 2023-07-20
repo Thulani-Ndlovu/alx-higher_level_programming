@@ -4,6 +4,7 @@ import io
 import sys
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 class BaseTesting(unittest.TestCase):
     def test_constructor(self):
@@ -18,3 +19,7 @@ class BaseTesting(unittest.TestCase):
         self.assertEqual(b2.id, b1.id + 1)
         b3 = Base()
         self.assertEqual(b3.id, b2.id + 1)
+
+
+if __name__ == "__main__":
+    unittest.main()
