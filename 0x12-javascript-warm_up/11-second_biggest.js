@@ -9,6 +9,6 @@ if (args.length < 4) {
   for (let i = 2; i < args.length; i++) {
     array[count++] = parseInt(args[i]);
   }
-  sorted = array.sort();
+  sorted = array.sort((a, b) => a - b);
   console.log(sorted[sorted.length - 2]);
 }
