@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const dictionary = require('./101-data').dict;
 const userIdsByOccurrence = {};
 
