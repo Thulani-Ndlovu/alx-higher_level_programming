@@ -1,6 +1,10 @@
 #!/usr/bin/node
 const fs = require('fs');
 const args = process.argv;
+
+if (args.length < 5) {
+  return -1;
+}
 const fileA = args[2];
 const fileB = args[3];
 const fileC = args[4];
