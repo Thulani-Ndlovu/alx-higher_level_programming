@@ -2,12 +2,12 @@
 const fs = require('fs');
 const args = process.argv;
 
-const fileA = args[2];
-const fileB = args[3];
-const fileC = args[4];
+const fileA = args[1];
+const fileB = args[2];
+const fileC = args[3];
 
 function concatenateFiles (source1, source2, destination) {
-  if (args.length < 5) {
+  if (args.length < 4) {
     return -1;
   }
   const data1 = fs.readFileSync(source1, 'utf8');
