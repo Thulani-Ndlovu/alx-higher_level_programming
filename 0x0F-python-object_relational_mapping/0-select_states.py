@@ -14,9 +14,16 @@ def States(username, password, name):
         db=name
     )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM `states` ORDER BY `id` ASC")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
 
     db.close()
+
+
+if __name__ == '__main__':
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    States(username, password, database)
