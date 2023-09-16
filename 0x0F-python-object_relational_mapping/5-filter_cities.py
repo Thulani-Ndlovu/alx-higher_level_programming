@@ -17,3 +17,5 @@ if __name__ == "__main__":
                  ON `c`.`state_id` = `s`.`id` \
                  ORDER BY `c`.`id`")
     cursor.execute(sql_query)
+    print(", ".join([ct[2] for ct in cursor.fetchall()
+                     if ct[4] == sys.argv[4]]))
