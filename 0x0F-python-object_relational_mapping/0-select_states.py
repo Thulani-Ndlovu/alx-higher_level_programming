@@ -7,7 +7,7 @@ import MySQLdb
 def States(username, password, name):
     '''listing all the states'''
     db = MySQLdb.connect(
-        host="localhost",
+        host='localhost',
         port=3306,
         username=username,
         passwd=password,
