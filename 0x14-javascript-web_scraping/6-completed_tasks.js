@@ -11,12 +11,12 @@ request(process.argv[2], (e, res, body) => {
 
     for (let i = 0; i < body.length; ++i) {
       const userId = body[i].userId;
-      const complete = body[i].complete;
+      const completed = body[i].completed;
 
-      if (complete && !tasksCompletedByUserId[userId]) {
+      if (completed && !tasksCompletedByUserId[userId]) {
         tasksCompletedByUserId[userId] = 0;
       }
-      if (complete) ++tasksCompletedByUserId[userId];
+      if (completed) ++tasksCompletedByUserId[userId];
     }
 
     console.log(tasksCompletedByUserId);
