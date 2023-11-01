@@ -19,7 +19,7 @@ function errorHandler (e) {
 }
 
 function movieCharacters (movieId) {
-  const movieAPI = `https://swapi-api.hbtn.io/api/films/${movieId}`;
+  const movieAPI = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
   getData(movieAPI).then(JSON.parse, errorHandler).then((res) => {
     const chars = res.characters;
     const promises = {};
